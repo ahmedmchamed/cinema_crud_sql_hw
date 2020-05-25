@@ -1,9 +1,9 @@
 ## Questions
 
-1.  Return ALL the data in the 'movies' table.
+### 1.  Return ALL the data in the 'movies' table.
 
 **Command:**
-`SELECT * FROM movies;`
+```SELECT * FROM movies;```
 
 **Result:**
 ```
@@ -29,10 +29,10 @@ id |                title                | year | show_time
  18 | Thor: Ragnarok                      | 2017 | 22:10
  19 | Black Panther                       | 2018 | 21:00
 ```
-2.  Return ONLY the name column from the 'people' table
+### 2.  Return ONLY the name column from the 'people' table
 
 **Command:**
-`SELECT name FROM people;`
+```SELECT name FROM people;```
 
 **Result:**
 ```
@@ -55,10 +55,10 @@ name
  Mayor Joe Quimby
  Groundskeeper Willie
 ```
-3.  Oops! Someone spelled Krusty The Clown's name wrong! Change it to reflect the proper spelling (Crusty should be Krusty).
+### 3.  Oops! Someone spelled Krusty The Clown's name wrong! Change it to reflect the proper spelling (Crusty should be Krusty).
 
 **Command:**
-`UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';`
+```UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';```
 
 **Result:**
 ```
@@ -66,20 +66,20 @@ name
 ------------------
  Krusty the Clown
 ```
-4.  Return ONLY Homer Simpson's name from the 'people' table.
+### 4.  Return ONLY Homer Simpson's name from the 'people' table.
 
 **Command:**
-`SELECT name FROM people WHERE name = 'Homer Simpson';`
+```SELECT name FROM people WHERE name = 'Homer Simpson';```
 ```
 Result:
 name
 ---------------
  Homer Simpson
 ```
-5.  The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+### 5.  The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
 
 **Command:**
-`DELETE FROM movies WHERE title = 'Batman Begins';`
+```DELETE FROM movies WHERE title = 'Batman Begins';```
 
 **Result:**
 ```
@@ -104,10 +104,10 @@ id |                title                | year | show_time
  18 | Thor: Ragnarok                      | 2017 | 22:10
  19 | Black Panther                       | 2018 | 21:00
 ```
-6.  We forgot one of the main characters! Add Bart Simpson to the 'people' table
+### 6.  We forgot one of the main characters! Add Bart Simpson to the 'people' table
 
 **Command:**
-`INSERT INTO people (name) VALUES ('Bart Simpson');`
+```INSERT INTO people (name) VALUES ('Bart Simpson');```
 
 **Result:**
 ```
@@ -131,10 +131,10 @@ id |         name
  17 | Groundskeeper Willie
  14 | Krusty the Clown
 ```
-7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
+### 7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
 
 **Command:**
-`DELETE FROM people WHERE name = 'Eric Cartman';`
+```DELETE FROM people WHERE name = 'Eric Cartman';```
 
 **Result:**
 ```
@@ -157,10 +157,10 @@ id |         name
  17 | Groundskeeper Willie
  14 | Krusty the Clown
 ```
-8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
+### 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
 
 **Command:**
-`INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '07:00');`
+```INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '07:00');```
 
 **Result:**
 ```
@@ -186,10 +186,10 @@ id |                title                | year | show_time
  19 | Thor: Ragnarok                      | 2017 | 22:10
  20 | Black Panther                       | 2018 | 21:00
 ```
-9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
+### 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
 
 **Iron Man 2 show_time command:**
-`SELECT show_time FROM movies WHERE title = 'Iron Man 2';`
+```SELECT show_time FROM movies WHERE title = 'Iron Man 2';```
 
 **Iron Man 2 show_time result:**
 ```
@@ -199,7 +199,7 @@ show_time
 ```
 
 **Iron Man 3 command:**
-`UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';`
+```UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';```
 
 **Iron Man 3 Result:**
 ```
@@ -209,4 +209,8 @@ show_time
 ```
 ## Extension
 
-1.  Research how to delete multiple entries from your table in a single command.
+### 1.  Research how to delete multiple entries from your table in a single command.
+
+```
+DELETE FROM movies WHERE id IN (9, 10, 11, 12, 13, 14, 15, 16);
+```
